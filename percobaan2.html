@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <style>
+        .logo {
+            float: left;
+        }
+
+        .menu-toggle {
+            display: none;
+            cursor: pointer;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .digital-clock {
+            float: right;
+            margin-top: 10px;
+            font-size: 18px;
+        }
+
+        @media (max-width: 768px) {
+            .menu-toggle {
+                display: block;
+            }
+
+            nav ul {
+                display: none;
+            }
+
+            nav ul.active {
+                display: block;
+            }
+
+            nav ul li {
+                text-align: center;
+            }
+        }
+
+        /* Tambahkan CSS untuk teks di bawah navbar */
+        .content {
+            text-align: center;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">Universitas Pamulang</div>
+        <div class="menu-toggle">
+            <i class="fa fa-bars"></i>
+        </div>
+        <div class="digital-clock" id="digital-clock"></div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+    
+    <!-- Pindahkan elemen-elemen teks ke dalam elemen body -->
+    <div class="content">
+        
+        <font face="arial" color="white" size=4>   <h1>Perkenalkan</h1>
+        <p>Perkenalkan, Nama saya Yoga Aditya.</p> <br>
+        saya adalah Mahasiswa Universitas Pamulang semester 5,<br> dan ini adalah
+    contoh website Html Menggunakan HyperLink </br>
+    </div>
+    
+    <audio src="cinematic.mp4"></audio>
+    <audio src="cinematic.mp4" controls autoplay loop>
+        <source src="nama-audio.mp3" type="audio/mpeg">
+        Your browser does not support the audio element.
+    </audio>
+
+    <script>
+        function updateDigitalClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById('digital-clock').textContent = `${hours}:${minutes}:${seconds}`;
+        }
+
+        $(document).ready(function(){
+            $(".menu-toggle").click(function(){
+                $('nav ul').toggleClass('active');
+            });
+
+            // Update the digital clock every second
+            setInterval(updateDigitalClock, 1000);
+            updateDigitalClock(); // Initial update
+        });
+    </script>
+</body>
+</html>
