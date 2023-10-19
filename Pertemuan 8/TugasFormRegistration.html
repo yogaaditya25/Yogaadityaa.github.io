@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tugas Form Registration</title>
+    <link rel="stylesheet" type="text/css" href="bootstrap/css/bootstrap.css">
+    <script type="text/javascript" src="bootstrap/js/jquery.js"></script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.js"></script>
+
+    <style>
+        #Alamat {
+            width: 400px;
+            height: 90px; /* Atur lebar sesuai kebutuhan Anda */
+        }
+        h1 {
+            color: rgb(196, 19, 196);
+            font-size: 40px;
+            text-align: center;
+            font-family: 'Times New Roman', Times, serif;
+        }
+    </style>
+</head>
+<body>
+    <form id="registration-form">
+        <h1>Free Registration</h1>
+        <pre>
+<label for="Nama"> Nama       : <input type="text" id="Nama" name="Nama" value=""></label>
+
+<label for="TglLahir"> Tgl Lahir  : <input type="number" size="7" id="TglLahir" name="TglLahir" value=""> / <input type="number" size="7" id="Bulan" name="TglLahir2" value=""> / <input type="number" size="13" id="Tahun" name="TglLahir3" value=""></label>
+
+<label for="Alamat"> Alamat     : <input type="text" id="Alamat"  name="Alamat"  value=""></label>
+
+<label for="Kota"> Kota       : <input type="text" id="Kota" name="Kota" value=""></label>
+
+<label for="Pekerjaan"> Pekerjaan  : <select name="agama">
+                <option value="Tani">Tani</option>
+                <option value="Dosen">Dosen</option>
+                <option value="Karyawan">Karyawan Swasta</option>
+                <option value="IRT">Ibu Rumah Tangga</option>
+                <option value="GURU Honorer">Guru Honorer</option>
+                <option value="Mahasiswa/Pelajar">Mahasiswa/Pelajar</option>
+            </select></label>
+
+<label for="JenisKelamin"> Jenis
+ Kelamin    : <input type="radio" name="jkel" value="Pria"> Laki-Laki  <input type="radio" name="jkel" value="Wanita"> Perempuan</label>
+
+<label for="Hobi"> Hobby       :<input type="checkbox" name="Hobi" value="Reading"> Reading
+             <input type="checkbox" name="Hobi" value="Sport"> Sport
+             <input type="checkbox" name="Hobi" value="Singing"> Singing
+             <input type="checkbox" name="Hobi" value="Traveling"> Traveling
+        </label>
+        
+        <button type="submit" class="btn btn-primary">Kirim</button> <button type="button" class="btn btn-danger" id="cancel-button">Cancel</button>
+    </form>
+    <script>
+        document.getElementById('cancel-button').addEventListener('click', function () {
+            document.getElementById('registration-form').reset();
+        });
+    </script>
+    </pre>
+</body>
+</html>
