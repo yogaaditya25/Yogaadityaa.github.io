@@ -1,107 +1,13 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <link rel="shortcut icon" href="image/favicon.ico"> 
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Percobaan</title>
-    <style>
-        body, h1, p {
-            padding: 0;
-            margin: 0;
-            font-family: Arial, sans-serif;
-        }
-
-        .hero {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-image: linear-gradient(to right, rgba(0, 242, 96, 0.3), rgba(47, 168, 248, 0.3));
-            color: white;
-            font-size: 3em;
-            position: relative;
-            min-height: 100vh;
-            overflow: hidden;
-        }
-
-        .hero-content {
-            text-align: center;
-        }
-
-        .hero a {
-            color: white;
-            text-decoration: none;
-            font-size: 1.5em;
-            margin: 10px;
-        }
-
-        .hero a:hover {
-            text-decoration: underline;
-        }
-
-        .audio-container {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            margin-top: 20px;
-        }
-
-        .video-bg {
-            position: absolute;
-            bottom: 0;
-            left: 0;
-            min-height: 100;
-            min-width: 100;
-            z-index: -1;
-        }
-
-        #clock {
-            position: absolute;
-            top: 20px;
-            right: 20px;
-            font-size: 2em;
-            color: white;
-        }
-
-        .logo {
-            position: absolute;
-            top: 20px;
-            left: 20px;
-            max-width: 100px;
-            height: auto;
-        }
-    </style>
-</head>
-<body>
-    <div class="hero" id="home">
-        <img class="logo" src="logo unpam.png" alt="Logo">
-        <div class="hero-content">
-            <h1>YOGA ADITYA</h1>
-            <a href="index.html">Home</a> 
-            <a href="percobaan2.html">About</a>
-        </div>
-        <div class="audio-container">
-            <audio controls autoplay loop>
-                <source src="musik.mp3" type="audio/mpeg">
-                Your browser does not support the audio element.
-            </audio>
-        </div>
-        <video class="video-bg" src="cinematic.mp4" autoplay muted loop></video>
-    </div>
-    <div id="clock"></div>
-
-    <script>
-        function updateClock() {
-            const now = new Date();
-            const hours = now.getHours().toString().padStart(2, '0');
-            const minutes = now.getMinutes().toString().padStart(2, '0');
-            const seconds = now.getSeconds().toString().padStart(2, '0');
-            document.getElementById('clock').textContent = `${hours}:${minutes}:${seconds}`;
-        }
-
-        setInterval(updateClock, 1000);
-        updateClock();
-    </script>
-</body>
-</html>
+<HTML> 
+    <HEAD> 
+    <TITLE> Pertemuan 9 </TITLE> 
+    </HEAD> 
+    <frameset rows="25%,60%,20%"> 
+      <frame src="header.html"  noresize> 
+      <frameset cols="8%, 85%"> 
+        <frame src="menu.html"> 
+     <frame src="home.html" name="kanan"> 
+      </frameset> 
+      <frame src="footer.html" noresize scrolling=no>
+    </frameset>
+    </HTML> 
