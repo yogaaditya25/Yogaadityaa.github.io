@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        /* CSS untuk footer */
+        footer {
+            text-align: center; /* Untuk memposisikan teks di tengah-tengah */
+            padding: 0; /* Menghilangkan padding */
+            margin: 0; /* Menghilangkan margin */
+        }
+        
+        /* Ganti warna teks sesuai keinginan */
+        p {
+            margin: 0; /* Menghilangkan margin pada paragraf */
+        }
+        
+        /* Ganti warna teks sesuai keinginan */
+        p:last-child {
+            color: blue; /* Warna teks untuk paragraf terakhir */
+        }
+    </style>
+</head>
+<body>
+    <footer>
+        <p style="color: red;">Copy Right <sup>&COPY;</sup> Yoga Aditya</p>
+        <div id="clock"></div>
+    </footer>
+    <script>
+        function updateClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            const timeString = `${hours}:${minutes}:${seconds}`;
+            document.getElementById('clock').textContent = timeString;
+        }
+
+        setInterval(updateClock, 1000);
+        updateClock(); // Panggil fungsi pertama kali agar tidak menunggu 1 detik pertama
+    </script>
+</body>
+</html>
