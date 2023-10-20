@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tugas Form Registration</title>
+<style>
+    form {
+    margin: 0 auto;
+    width: 40%;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    background-color: #d7ea6b
+    }
+    label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    }
+    input[type="text"], input[type="date"], select {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #c05c5c;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+    }
+    input[type="reset"] {
+    background-color: #18548d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    input[type="reset"]:hover {
+    background-color: #f31717;
+    }
+    input[type="submit"] {
+    background-color: #32939a;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    }
+    input[type="submit"]:hover {
+    background-color: #4577a0;
+    }
+    input:hover {
+    transform: scale(1.1);
+    transition: 1s ease-in-out;
+    }
+</style>
+</head>
+<body>
+<form>
+<center><font face="times new roman" color="mediumpurple"><h1>Free Registration</h1></font></center>
+<hr> <label for="nama">Nama : </label>
+<input type="text" id="nama" name="nama">
+<label for="date">Tanggal Lahir :</label>
+<input type="date" name="date" id="date">
+<label for="alamat">Alamat :</label>
+<input type="text" name="alamat" id="alamat">
+<label for="kota">Kota :</label>
+<input type="text" name="kota" id="kota">
+<label for="pekerjaan">Pekerjaan :</label>
+<select name="pekerjaan" id="pekerjaan">
+<option value="tani">Tani</option>
+<option value="karyawan">Karyawan</option>
+<option value="Guru">Guru</option>
+<option value="wirausaha">Wirausaha</option>
+<option value="mahasiswa">Mahasiswa</option>
+<option value="lainnya">Lainnya</option>
+</select>
+
+<label for="jkel">Jenis Kelamin : </label><input type="radio"
+name="jkel"
+value="Laki-Laki">Laki-Laki <input type="radio" name="jkel"
+value="Perempuan">Perempuan<br><br>
+<label for="hb">Hobi : </label>
+<input type="checkbox" name="hb">Reading <br>
+<input type="checkbox" name="hb">Sport <br>
+<input type="checkbox" name="hb">Singing <br>
+<input type="checkbox" name="hb">Travelling <br>
+<input type="submit" id="Submit" value="Kirim">
+<input type="reset" id="reset" value="Cancel">
+</form>
+</body>
+</html>
