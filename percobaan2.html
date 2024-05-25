@@ -8,6 +8,20 @@
     <link rel="stylesheet" href="font-awesome/css/font-awesome.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <style>
+        body {
+            font-family: Arial, sans-serif;
+            color: white;
+            background-color: #333;
+            margin: 0;
+            padding: 0;
+        }
+        
+        header {
+            background-color: #444;
+            padding: 10px;
+            overflow: hidden;
+        }
+
         .logo {
             float: left;
         }
@@ -25,6 +39,22 @@
             font-size: 18px;
         }
 
+        nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin-right: 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
         @media (max-width: 768px) {
             .menu-toggle {
                 display: block;
@@ -32,6 +62,7 @@
 
             nav ul {
                 display: none;
+                clear: both;
             }
 
             nav ul.active {
@@ -39,14 +70,19 @@
             }
 
             nav ul li {
+                display: block;
                 text-align: center;
+                margin: 10px 0;
             }
         }
 
-        /* Tambahkan CSS untuk teks di bawah navbar */
         .content {
             text-align: center;
             margin-top: 20px;
+        }
+
+        h1 {
+            margin-top: 0;
         }
     </style>
 </head>
@@ -64,17 +100,14 @@
         </nav>
     </header>
     
-    <!-- Pindahkan elemen-elemen teks ke dalam elemen body -->
     <div class="content">
-        
-        <font face="arial" color="white" size=4>   <h1>Perkenalkan</h1>
-        <p>Perkenalkan, Nama saya Yoga Aditya.</p> <br>
-        saya adalah Mahasiswa Universitas Pamulang semester 5,<br> dan ini adalah
-    contoh website Html Menggunakan HyperLink </br>
+        <h1>Perkenalkan</h1>
+        <p>Perkenalkan, Nama saya Yoga Aditya.</p>
+        <p>Saya adalah Mahasiswa Universitas Pamulang semester 5,<br> dan ini adalah contoh website HTML Menggunakan HyperLink.</p>
     </div>
     
-    <audio src="cinematic.mp4"></audio>
-    <audio src="cinematic.mp4" controls autoplay loop>
+    <audio controls autoplay loop>
+        <source src="cinematic.mp4" type="audio/mp4">
         <source src="nama-audio.mp3" type="audio/mpeg">
         Your browser does not support the audio element.
     </audio>
